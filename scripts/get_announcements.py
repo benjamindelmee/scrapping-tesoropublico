@@ -37,7 +37,3 @@ def get_announcements():
 
 if __name__ == '__main__':
     # err, data = get_announcements()
-    # if err:    
-    #     print(err)
-    # else:
-    #     print(data)

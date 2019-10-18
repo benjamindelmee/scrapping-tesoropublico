@@ -1,6 +1,9 @@
 from typing import Any, List
+import logging
 import requests
 from bs4 import BeautifulSoup
+
+logging.basicConfig(level=logging.INFO)
 
 class ScrappingException(Exception):
     pass
@@ -10,10 +13,12 @@ def workflow(f):
         try:
             err = None
             data = f(*args, **kwargs)
+            logging.info('The workflow {} has finished successfully'.format(f.__name__))
             return [err, data]
         except ScrappingException as e:
             err = 'Error in the workflow "{}", {}'.format(f.__name__, e)
             data = None
+            logging.error(err)
             return [err, data]
     return g
 

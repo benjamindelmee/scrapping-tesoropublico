@@ -117,11 +117,7 @@ def get_results_treasury_letters():
 
 if __name__ == '__main__':
     err, data = get_results_government_bonds()
-    # err, data = get_results_government_obligations()
-    # err, data = get_results_index_bond()
-    # err, data = get_results_liquidities()
-    # err, data = get_results_treasury_letters()
-    if err:    
-        print(err)
-    else:
-        print(data)
+    err, data = get_results_government_obligations()
+    err, data = get_results_index_bond()
+    err, data = get_results_liquidities()
+    err, data = get_results_treasury_letters()

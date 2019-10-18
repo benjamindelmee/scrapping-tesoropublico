@@ -21,8 +21,3 @@ def get_calendar_treasury_letters():
 if __name__ == '__main__':
     err, data = get_calendar_bonds_and_obligations()
     err, data = get_calendar_treasury_letters()
-    if err:    
-        print(err)
-    else:
-        for line in data:
-            print(line)
